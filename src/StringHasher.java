@@ -35,8 +35,8 @@ public class StringHasher {
         };
 
 
-        System.out.println("Cat".hashCode());
-        System.out.println("decode".hashCode());
+        System.out.println("Cat".hashCode()); // Here for testing purposes
+        System.out.println("decode".hashCode()); // Here for testing purposes
         System.out.println("String\t\tbadHash\t\tbetterHash\t\thashCode");
         for (String s : testStrings) {
             System.out.printf("%-10s\t%-10d\t%-12d\t%-10d\n",
