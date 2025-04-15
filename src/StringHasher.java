@@ -22,12 +22,8 @@ public class StringHasher {
         int hash = 0;
         int n = s.length()-1;
         for(int i = 0; i< s.length(); i++){
-            if(hash != 2147483647){
-                hash += Math.pow(31, (n-i)) * s.charAt(i);
-            } else{
-                hash = -2147483647;
-                hash += Math.pow(31, (n-(i))) * s.charAt(i);
-            }
+            hash += (int) Math.pow(31, (n-i)) * s.charAt(i);
+            // lesson learned, convert it to an int.
         }
         return hash;
     }
